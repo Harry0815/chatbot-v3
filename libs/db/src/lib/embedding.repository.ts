@@ -27,3 +27,9 @@ export async function searchSimilarDocuments(query: string, limit = 3): Promise<
   // PostgreSQL gibt ein Array von Objekten zurück
   return result.rows.map((row ): string => row['content'] as string);
 }
+
+export async function embedAndStore(content: string) {
+  const vector = await generateEmbedding(content);
+  await saveEmbedding(content, vector);
+}
+

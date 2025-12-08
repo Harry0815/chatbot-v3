@@ -5,18 +5,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/esbuild:esbuild",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/db",
-        "main": "db/src/index.ts",
-        "tsConfig": "db/tsconfig.lib.json",
-        "assets": ["db/*.md"],
-        "format": ["cjs"],
-        "generatePackageJson": true
-      }
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

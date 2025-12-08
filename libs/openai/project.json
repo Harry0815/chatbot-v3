@@ -5,18 +5,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/esbuild:esbuild",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/libs/openai",
-        "main": "libs/openai/src/index.ts",
-        "tsConfig": "libs/openai/tsconfig.lib.json",
-        "assets": ["libs/openai/*.md"],
-        "format": ["cjs"],
-        "generatePackageJson": true
-      }
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

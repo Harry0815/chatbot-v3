@@ -13,8 +13,8 @@ import {
   ApiOperation,
 } from '@nestjs/swagger';
 import { ChatService } from '../services/chat.service';
-import { ChatRequestDto, ChatResponseDto } from 'libs/models/src';
-import { ApiKeyGuard } from 'libs/auth/src';
+import { ChatRequestDto, ChatResponseDto } from '@chatbot-v3/models';
+import { ApiKeyGuard } from '@chatbot-v3/auth';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { z } from 'zod';
 

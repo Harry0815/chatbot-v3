@@ -1,6 +1,5 @@
 import {
   pgSchema,
-  pgTable,
   serial,
   text,
   timestamp,

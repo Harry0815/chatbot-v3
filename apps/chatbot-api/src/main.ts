@@ -7,7 +7,7 @@ import { AppModule } from './app/app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { patchNestJsSwagger } from 'nestjs-zod';
 import * as fs from 'fs/promises';
-import { embedAndStore } from '@chatbot-v3/openai';
+import { embedAndStore } from '@chatbot-v3/db';
 
 
 type FaqEntry = {

@@ -1,5 +1,4 @@
 import * as dotenv from 'dotenv';
-import { saveEmbedding } from '@chatbot-v3/db';
 
 dotenv.config();
 
@@ -29,9 +28,4 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 
   const json = await response.json();
   return json.data[0].embedding;
-}
-
-export async function embedAndStore(content: string) {
-  const vector = await generateEmbedding(content);
-  await saveEmbedding(content, vector);
 }
