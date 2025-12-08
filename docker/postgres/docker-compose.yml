@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:17.6-alpine
-    container_name: chatbot_postgres
+    image: ankane/pgvector
+    container_name: chatbot
     restart: always
     environment:
       POSTGRES_DB: chatbot
@@ -11,3 +11,5 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

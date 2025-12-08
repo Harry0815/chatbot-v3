@@ -15,11 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@chatbot-v3/db": ["db/src/index.ts"],
+      "@chatbot-v3/db": ["libs/db/src/index.ts"],
       "@chatbot-v3/models": ["libs/models/src/index.ts"],
       "@chatbot-v3/auth": ["libs/auth/src/index.ts"],
       "@chatbot-v3/openai": ["libs/openai/src/index.ts"],
-      "@chatbot-v3/core": ["libs/core/src/index.ts"]
+      "@chatbot-v3/core": ["libs/core/src/index.ts"],
+      "@chatbot-v3/testConfig": ["libs/testConfig/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
